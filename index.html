@@ -6,13 +6,16 @@
   </head>
 
   <link rel="stylesheet" href="./photon/css/photon.min.css">
-  <script src="./jquery.js"></script>
-  <script src="./main.js"></script>
-  <script type="text/javascript">
+
+  <script> window.$ = window.jQuery = require('jquery');</script>
+  <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <script src="./controler.js"></script>
+
+  <!-- <script type="text/javascript">
     $(document).ready(function(){
       $('.btn-group').hide()
-    })
-  </script>
+    });
+  </script> -->
 
   <body>
     <div class="window">
@@ -21,31 +24,25 @@
 
         <div class="toolbar-actions">
 
-          <div class="btn-group">
-            <button class="btn btn-default">
+          <div class="btn-group pull-right"> <!--Posicionando os botoes as direta da tela-->
+            <!--<button class="btn btn-default">
               <span class="icon icon-home"></span>
+            </button>-->
+            <button id="btnMinus" class="btn btn-default">
+              <span class="icon icon-minus
+              "></span>
             </button>
-            <button class="btn btn-default">
-              <span class="icon icon-folder"></span>
+            <button id="btnPlus" class="btn btn-default">
+              <span class="icon icon-plus"></span>
             </button>
-            <button class="btn btn-default active">
-              <span class="icon icon-cloud"></span>
-            </button>
-            <button class="btn btn-default">
-              <span class="icon icon-popup"></span>
-            </button>
-            <button class="btn btn-default">
-              <span class="icon icon-shuffle"></span>
-            </button>
+            <button id="btnCancel" class="btn btn-default">
+              <span class="icon icon-cancel"></span>
+            </button>>
           </div>
 
           <button class="btn btn-default">
             <span class="icon icon-home icon-text"></span>
-            Filters
-          </button>
-
-          <button class="btn btn-default btn-dropdown pull-right js-popover-trigger">
-            <span class="icon icon-megaphone"></span>
+            Filtros
           </button>
         </div>
       </header>
