@@ -11,7 +11,7 @@ const fs = require('fs')
 
 const root = fs.readdirSync('/')
 
-// Isso imprimirá todos os arquivos presentes no 
+// Isso imprimirá todos os arquivos presentes no
 // diretório raiz do disco, seja ele '/' ou 'C:\'.
 console.log(root)
 
@@ -19,13 +19,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true
-    }
-  })
+  mainWindow = new BrowserWindow({ width: 1300, height: 700, frame: true})
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')

@@ -4,14 +4,166 @@
     <meta charset="UTF-8">
     <title>Multimidia Educacional</title>
   </head>
-  <body>
-    <h1>Criação Electron - Teste</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
 
-    <script>
+  <link rel="stylesheet" href="./photon/css/photon.min.css">
+  <script src="./jquery.js"></script>
+  <script src="./main.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.btn-group').hide()
+    })
+  </script>
+
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Projeto Teste</h1>
+
+        <div class="toolbar-actions">
+
+          <div class="btn-group">
+            <button class="btn btn-default">
+              <span class="icon icon-home"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-folder"></span>
+            </button>
+            <button class="btn btn-default active">
+              <span class="icon icon-cloud"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-popup"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-shuffle"></span>
+            </button>
+          </div>
+
+          <button class="btn btn-default">
+            <span class="icon icon-home icon-text"></span>
+            Filters
+          </button>
+
+          <button class="btn btn-default btn-dropdown pull-right js-popover-trigger">
+            <span class="icon icon-megaphone"></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane pane-sm sidebar">
+            <nav class="nav-group">
+              <h5 class="nav-group-title">Favoritos</h5>
+              <span class="nav-group-item">
+                <span class="icon icon-home"></span>
+                Inicio
+              </span>
+              <span class="nav-group-item active">
+                <span class="icon icon-light-up"></span>
+                Fotos
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-download"></span>
+                Downloads
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-folder"></span>
+                Documentos
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-window"></span>
+                Aplicações
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-signal"></span>
+                Wi-Fi
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-monitor"></span>
+                Área de Trabalho
+              </span>
+            </nav>
+
+            <nav class="nav-group">
+              <h5 class="nav-group-title">Tags</h5>
+              <span class="nav-group-item" href="#">
+                <span class="icon icon-record" style="color:#fc605b"></span>
+                Vermelho
+              </span>
+              <span class="nav-group-item" href="#">
+                <span class="icon icon-record" style="color:#fdbc40"></span>
+                Laranja
+              </span>
+              <span class="nav-group-item" href="#">
+                <span class="icon icon-record" style="color:#34c84a"></span>
+                Verde
+              </span>
+              <span class="nav-group-item" href="#">
+                <span class="icon icon-record" style="color:#57acf5"></span>
+                Azul
+              </span>
+              <span class="nav-group-item" href="#">
+                <span class="icon icon-record" style="color:#a64dff"></span>
+                Lílas
+              </span>
+            </nav>
+            <nav class="nav-group">
+              <h5 class="nav-group-title">Dispositivos</h5>
+              <span class="nav-group-item">
+                <span class="icon icon-drive"></span>
+                Disco Local
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-drive"></span>
+                Leitor de DVD
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-drive"></span>
+                Unidade C:
+              </span>
+            </nav>
+          </div>
+          <div class="pane">
+            <table class="table-striped">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Tipo</th>
+                  <th>Data de Modificação</th>
+                  <th>Autor</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <td>photon.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>Diego</td>
+                </tr>
+                <tr>
+                  <td>tables.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>Tiago</td>
+                </tr>
+                <tr>
+                  <td>tabs.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>Daniel</td>
+                </tr>
+                <tr>
+                  <td>variables.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
