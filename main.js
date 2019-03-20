@@ -13,13 +13,18 @@ const root = fs.readdirSync('/')
 
 // Isso imprimirá todos os arquivos presentes no
 // diretório raiz do disco, seja ele '/' ou 'C:\'.
+// a avariavel global __dirname se refere ao diretorio em qual o script esta sendo executado 
 console.log(root)
 
 let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({ width: 1300, height: 700, frame: false})
+  mainWindow = new BrowserWindow({width: 1300, 
+                                  height: 700, 
+                                  frame: true, 
+                                  icon: __dirname + "./multimidia.png",
+                                  nodeIntegration: true })
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')

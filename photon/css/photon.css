@@ -6,6 +6,18 @@ video {
   vertical-align: baseline;
 }
 
+:root{
+    --mediumgrey: #CFDBD5;
+    --ligth: #E8EDDF;
+    --ligthyellow: rgb(248, 229, 177);
+    --black: #242423;
+    --ligthblack: #333533;
+}
+
+.fundo{
+  background-color: var(--ligthyellow); 
+}
+
 audio:not([controls]) {
   display: none;
 }
@@ -200,6 +212,11 @@ h6 {
   -webkit-user-select: text;
 }
 
+.text-type{
+  font-family: Verdana, sans-serif;
+  font-weight: 900;
+}
+
 .text-center {
   text-align: center;
 }
@@ -287,7 +304,7 @@ h6 {
 }
 
 .sidebar {
-  background-color: #9FFC9F;
+  background-color: var(--ligth);
 }
 
 .draggable {
@@ -521,10 +538,11 @@ h6 {
 
 .title {
   margin: 0;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 400;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
-  color: #555;
+  color: var(--ligthblack);
   cursor: default;
 }
 
@@ -573,9 +591,16 @@ input[type="checkbox"] {
   line-height: normal;
 }
 
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .form-control {
   display: inline-block;
-  width: 100%;
+  width: 75%;
   min-height: 25px;
   padding: 5px 10px;
   font-size: 13px;
@@ -596,6 +621,9 @@ textarea {
 
 .form-group {
   margin-bottom: 10px;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
 }
 
 .radio,
@@ -755,6 +783,7 @@ img {
 .nav-group-title {
   margin: 0;
   padding: 10px 10px 2px;
+  text-overflow: ellipsis;
   font-size: 12px;
   font-weight: 500;
   color: #1B404F;

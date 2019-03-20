@@ -10,14 +10,22 @@ $(document).ready(function(){
 
     $('#btnCancel').click(function () {
         console.log("Maximizar");
-        remote.BrowserWindow.getFocusedWindow().maximize();
-
+        if (remote.BrowserWindow.getFocusedWindow().isMaximized()){
+            remote.BrowserWindow.getFocusedWindow().restore();
+        }
+        else{
+            remote.BrowserWindow.getFocusedWindow().maximize();
+        }
     });
 
     $('#btnCancel').click(function () {
         console.log("Minimizar");
-        remote.BrowserWindow.getFocusedWindow().minimize();
-
+        if (remote.BrowserWindow.getFocusedWindow().isMinimized()){
+                remote,BrowserWindow.getFocusedWindow().restore();
+        }
+        else{
+            remote.BrowserWindow.getFocusedWindow().minimize();
+        }
     });
     //$('.btn-group').hide();
 });

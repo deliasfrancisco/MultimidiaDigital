@@ -5,7 +5,7 @@
     <title>Multimidia Educacional</title>
   </head>
 
-  <link rel="stylesheet" href="./photon/css/photon.min.css">
+  <link rel="stylesheet" href="./photon/css/photon.css">
 
   <script> window.$ = window.jQuery = require('jquery');</script>
   <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
@@ -37,7 +37,7 @@
             </button>
             <button id="btnCancel" class="btn btn-default">
               <span class="icon icon-cancel"></span>
-            </button>>
+            </button>
           </div>
 
           <button class="btn btn-default">
@@ -51,14 +51,10 @@
         <div class="pane-group">
           <div class="pane pane-sm sidebar">
             <nav class="nav-group">
-              <h5 class="nav-group-title">Favoritos</h5>
+              <h5 class="nav-group-title text-type">Favoritos</h5>
               <span class="nav-group-item">
                 <span class="icon icon-home"></span>
                 Inicio
-              </span>
-              <span class="nav-group-item active">
-                <span class="icon icon-light-up"></span>
-                Fotos
               </span>
               <span class="nav-group-item">
                 <span class="icon icon-download"></span>
@@ -73,17 +69,50 @@
                 Aplicações
               </span>
               <span class="nav-group-item">
-                <span class="icon icon-signal"></span>
-                Wi-Fi
-              </span>
-              <span class="nav-group-item">
                 <span class="icon icon-monitor"></span>
                 Área de Trabalho
               </span>
             </nav>
+            <br>
+            <br>
+            <br>
+
+            <ul class="list-group">
+              <li class="list-group-header">
+                <input class="form-control" type="text" placeholder="Procurar por alguem">
+              </li>
+              <li class="list-group-item">
+                <img class="img-circle media-object pull-left" src="./images/men.png" width="32" height="32">
+                <div class="media-body">
+                  <strong>Male</strong>
+                  <p>Choose this option if you are a man.</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <img class="img-circle media-object pull-left" src="./images/woman.png" width="32" height="32">
+                <div class="media-body">
+                  <strong>Female</strong>
+                  <p>Choose this option if you are a woman.</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <img class="img-circle media-object pull-left" src="./images/business.png" width="32" height="32">
+                <div class="media-body">
+                  <strong>Business</strong>
+                  <p>Choose this option if you have a company.</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <img class="img-circle media-object pull-left" src="./images/scientist.jpg" width="32" height="32">
+                <div class="media-body">
+                  <strong>Scientist</strong>
+                  <p>Choose this option if you develop toical searches.</p>
+                </div>
+              </li>
+            </ul>
 
             <nav class="nav-group">
-              <h5 class="nav-group-title">Tags</h5>
+              <h5 class="nav-group-title text-type">Tags</h5>
               <span class="nav-group-item" href="#">
                 <span class="icon icon-record" style="color:#fc605b"></span>
                 Vermelho
@@ -92,21 +121,10 @@
                 <span class="icon icon-record" style="color:#fdbc40"></span>
                 Laranja
               </span>
-              <span class="nav-group-item" href="#">
-                <span class="icon icon-record" style="color:#34c84a"></span>
-                Verde
-              </span>
-              <span class="nav-group-item" href="#">
-                <span class="icon icon-record" style="color:#57acf5"></span>
-                Azul
-              </span>
-              <span class="nav-group-item" href="#">
-                <span class="icon icon-record" style="color:#a64dff"></span>
-                Lílas
-              </span>
             </nav>
+
             <nav class="nav-group">
-              <h5 class="nav-group-title">Dispositivos</h5>
+              <h5 class="nav-group-title text-type">Dispositivos</h5>
               <span class="nav-group-item">
                 <span class="icon icon-drive"></span>
                 Disco Local
@@ -115,14 +133,55 @@
                 <span class="icon icon-drive"></span>
                 Leitor de DVD
               </span>
-              <span class="nav-group-item">
-                <span class="icon icon-drive"></span>
-                Unidade C:
-              </span>
             </nav>
           </div>
-          <div class="pane">
-            <table class="table-striped">
+          <div class="pane fundo center">
+            <form>
+              <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" class="form-control" placeholder="E-mail">
+              </div>
+              <div class="form-group">
+                <label>Senha</label>
+                <input type="senha" class="form-control" placeholder="Senha">
+              </div>
+              <div class="form-group">
+                <label>Descrição</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <select class="form-control">
+                <option>Opção 1</option>
+                <option>Opção 2</option>
+                <option>Opção 3</option>
+              </select>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Checkbox 1
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Checkbox 2
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="radios" checked>
+                  Escolha 1
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="radios">
+                  Escolha 2
+                </label>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-form btn-default">Cancelar</button>
+                <button type="submit" class="btn btn-form btn-primary">Cadastrar</button>
+              </div>
+            </form>
+            <!-- <table class="table-striped">
               <thead>
                 <tr>
                   <th>Nome</th>
@@ -156,7 +215,7 @@
                   <td>connors</td>
                 </tr>
               </tbody>
-            </table>
+            </table> -->
           </div>
         </div>
       </div>
